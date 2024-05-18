@@ -1,5 +1,6 @@
 package edu.javeriana.ingenieria.social.profesor.dominio;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -11,6 +12,9 @@ import lombok.Setter;
 public class Profesor {
     @Id
     private Integer id;
-    private Integer id_institucional, cedula;
-    private String correo_institucional;
+    @Column(name="id_institucional")
+    private Integer idInstitucional;
+    private Integer cedula;
+    @Column(name="correo_institucional")
+    private String correoInstitucional;
 }
